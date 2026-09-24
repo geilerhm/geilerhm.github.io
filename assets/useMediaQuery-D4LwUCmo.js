@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CbXtAM7H.js";import{u as t}from"./dist-CxYe84mW.js";var n=e(t(),1);function r(e){return(0,n.useSyncExternalStore)(t=>{let n=globalThis.matchMedia?.(e);return n?.addEventListener(`change`,t),()=>n?.removeEventListener(`change`,t)},()=>globalThis.matchMedia?.(e).matches??!1,()=>!1)}export{r as t};

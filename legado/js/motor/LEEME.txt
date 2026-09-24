@@ -1,0 +1,1 @@
+Aquí irán los módulos del motor (fase M2): fisica.js, choques.js, camara.js, entrada.js, audio.js y dibujo.js.

@@ -1,0 +1,49 @@
+/* MarIAna · estilos del juego
+   Colores de la bandera del colegio: azul, verde, amarillo, blanco y rojo */
+
+/* ===== Colores del colegio ===== */
+  :root{
+    --azul:#15317E; --azul-osc:#0F2461; --verde:#2E9E5B; --amarillo:#F5C518; --rojo:#D7282F; --blanco:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; padding:16px; background:var(--azul); color:var(--blanco);
+    font-family:"Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+    display:flex; flex-direction:column; align-items:center; gap:12px;
+  }
+  header{width:100%; max-width:800px; display:flex; align-items:center; gap:12px}
+  header img{width:52px; height:auto}
+  h1{margin:0; font-size:clamp(26px,5vw,36px); letter-spacing:-.5px}
+  h1 .ia{color:var(--amarillo)}
+  header small{display:block; font-size:12px; color:#CFE3D6; letter-spacing:.06em; text-transform:uppercase}
+  .bandera{width:100%; max-width:800px; height:8px; display:flex}
+  .bandera i{flex:1}
+
+  /* Marco del juego: el canvas se adapta al ancho de la pantalla */
+  .marco{position:relative; width:100%; max-width:800px; border:4px solid var(--amarillo); box-shadow:6px 6px 0 var(--verde); background:#9FD3F0}
+  canvas{display:block; width:100%; height:auto; aspect-ratio:16/9; touch-action:none}
+
+  /* Pantalla de inicio encima del canvas */
+  .inicio{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; gap:4%;
+    background:linear-gradient(135deg, rgba(15,36,97,.93), rgba(46,158,91,.88)); padding:3%}
+  .inicio[hidden]{display:none}
+  .inicio .foto{height:92%; width:auto; filter:drop-shadow(4px 6px 0 rgba(0,0,0,.25))}
+  .inicio .texto{display:flex; flex-direction:column; align-items:flex-start; gap:10px; max-width:52%}
+  .inicio .escudo{width:clamp(48px,11vw,90px)}
+  .inicio h2{margin:0; font-size:clamp(30px,8vw,64px); line-height:1}
+  .inicio h2 .ia{color:var(--amarillo)}
+  .inicio p{margin:0; font-size:clamp(12px,2.2vw,16px); color:#E6F0FF}
+  .boton{font:inherit; font-weight:bold; font-size:clamp(15px,2.6vw,20px); background:var(--rojo); color:#fff;
+    border:3px solid #fff; padding:8px 22px; cursor:pointer; box-shadow:3px 3px 0 var(--azul-osc)}
+  .boton:hover{transform:translate(-1px,-1px)}
+  .boton:focus-visible{outline:3px solid var(--amarillo); outline-offset:3px}
+
+  .ayuda{font-size:13px; color:#CFE3D6; text-align:center}
+  kbd{background:#fff; color:var(--azul-osc); padding:1px 6px; font-family:inherit; font-weight:bold}
+
+  /* Botones táctiles (solo se ven en celulares) */
+  .tactil{display:none; gap:14px; user-select:none; -webkit-user-select:none}
+  .tactil button{width:78px; height:64px; font-size:28px; background:#fff; color:var(--azul-osc);
+    border:3px solid var(--amarillo); box-shadow:3px 3px 0 var(--verde); touch-action:none}
+  @media (pointer:coarse){ .tactil{display:flex} }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MarIAna</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+  <img src="imagenes/escudo.png" alt="Escudo de la Institución Educativa María Auxiliadora">
+  <div>
+    <h1>Mar<span class="ia">IA</span>na</h1>
+    <small>I.E. María Auxiliadora · Lomitas – La Cumbre</small>
+  </div>
+</header>
+<div class="bandera" aria-hidden="true">
+  <i style="background:#1B3A8C"></i><i style="background:#2E9E5B"></i><i style="background:#F5C518"></i><i style="background:#fff"></i><i style="background:#D7282F"></i>
+</div>
+
+<div class="marco">
+  <canvas id="juego" width="800" height="450" aria-label="Juego MarIAna"></canvas>
+
+  <div class="inicio" id="fin" hidden>
+    <div class="texto" style="align-items:center;text-align:center;max-width:90%">
+      <img class="escudo" src="imagenes/escudo.png" alt="">
+      <h2 id="finTitulo">Fin del juego</h2>
+      <p id="finTexto"></p>
+      <button class="boton" id="btnOtraVez" type="button">Jugar otra vez</button>
+    </div>
+  </div>
+
+  <div class="inicio" id="pausa" hidden>
+    <div class="texto" style="align-items:center;text-align:center;max-width:90%">
+      <h2>Pausa</h2>
+      <p>Pulsa <b>P</b> o el botón para seguir.</p>
+      <button class="boton" id="btnSeguir" type="button">Seguir</button>
+    </div>
+  </div>
+
+  <div class="inicio" id="inicio">
+    <img class="foto" src="imagenes/mariana.png" alt="Mariana, la protagonista">
+    <div class="texto">
+      <img class="escudo" src="imagenes/escudo.png" alt="">
+      <h2>Mar<span class="ia">IA</span>na</h2>
+      <p>Ayuda a Mariana a cruzar el colegio y el campo hasta la bandera.<br>Recoge los libros y supera las malas notas, las tareas,<br>el despertador y el «¡A estudiar!» saltándoles encima.</p>
+      <p id="recordInicio" style="color:#F5C518;font-weight:bold"></p>
+      <button class="boton" id="btnJugar" type="button">Jugar</button>
+    </div>
+  </div>
+</div>
+
+<div class="tactil">
+  <button type="button" id="tIzq" aria-label="Caminar a la izquierda">◀</button>
+  <button type="button" id="tDer" aria-label="Caminar a la derecha">▶</button>
+  <button type="button" id="tSalto" aria-label="Saltar" style="background:#D7282F;color:#fff">▲</button>
+  <button type="button" id="tPausa" aria-label="Pausa" style="width:56px;font-size:20px">II</button>
+</div>
+<div style="display:flex;gap:10px">
+  <button class="boton" id="btnPausa" type="button" style="font-size:14px;padding:5px 14px;background:#fff;color:#0F2461">Pausa (P)</button>
+  <button class="boton" id="btnSonido" type="button" style="font-size:14px;padding:5px 14px;background:#fff;color:#0F2461">Sonido: sí (M)</button>
+  <button class="boton" id="btnMusica" type="button" style="font-size:14px;padding:5px 14px;background:#fff;color:#0F2461">Música: sí (N)</button>
+</div>
+<p class="ayuda">Camina con <kbd>←</kbd> <kbd>→</kbd> o <kbd>A</kbd> <kbd>D</kbd> · Salta con <kbd>Espacio</kbd>, <kbd>↑</kbd> o <kbd>W</kbd> · Pausa <kbd>P</kbd> · Sonido <kbd>M</kbd> · Música <kbd>N</kbd></p>
+
+<script src="js/principal.js"></script>
+</body>
+</html>

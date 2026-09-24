@@ -1,0 +1,1 @@
+Aquí irán las reglas del juego (fases M2 a M4): jugador.js, enemigos.js, objetos.js, poderes.js, nivel.js y puntaje.js.

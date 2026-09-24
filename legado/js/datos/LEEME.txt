@@ -1,0 +1,1 @@
+Aquí irán los datos (fase M3): personajes.json, enemigos.json, objetos.json, poderes.json y preguntas.json.
