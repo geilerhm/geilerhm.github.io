@@ -1,0 +1,1 @@
+import{l as e}from"./dist-CxYe84mW.js";import{mt as t}from"./index-AfnTcOww.js";import{PaginaJugar as n}from"./PaginaJugar-CPkmrcKQ.js";var r=e(),i=t(`/jugar`);function a(){let{nivel:e,jugadores:t}=i.useSearch();return(0,r.jsx)(n,{},`${e??`todo`}-${t??1}`)}export{a as RutaJugar};
